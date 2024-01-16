@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.1'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.personal'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+
+	implementation group: 'org.postgresql', name: 'r2dbc-postgresql', version: '1.0.4.RELEASE'
+
+	implementation group: 'jakarta.persistence', name: 'jakarta.persistence-api', version: '3.2.0-M1'
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

@@ -21,4 +21,8 @@ public class ProductService {
     public Flux<Products> getProducts() {
         return productRepository.findAll().delayElements(Duration.ofSeconds(5));
     }
+
+    public  void unusedMethod(){
+        System.out.println("this is an unused method");
+    }
 }

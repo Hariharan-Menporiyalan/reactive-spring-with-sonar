@@ -4,7 +4,6 @@ package com.personal.project.entity;
 import jakarta.persistence.Column;
 import org.springframework.data.annotation.Id;
 
-
 public class Products {
     public int getId() {
         return id;

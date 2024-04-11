@@ -2,7 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.1'
 	id 'io.spring.dependency-management' version '1.1.4'
-	id "org.sonarqube" version "4.4.1.3373"
+	id "org.sonarqube" version "5.0.0.4638"
 }
 
 group = 'com.personal'
@@ -37,9 +37,18 @@ tasks.named('test') {
 }
 
 sonar {
+	scanner {
+		sonarQubeUrl = "https://sonarcloud.io"
+		organization = "hariharan-s-Organization"
+		projectKey = "reactive-spring-with-sonar"
+		token = project.properties['SONAR_TOKEN'] // Assuming you have a sonarcloud.token property set
+	}
+
 	properties {
 		property "sonar.projectKey", "reactive-spring-with-sonar"
 		property "sonar.organization", "hariharan-s-Organization"
 		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.sources", "src/main"
+		property "sonar.tests", "src/test"
 	}
 }

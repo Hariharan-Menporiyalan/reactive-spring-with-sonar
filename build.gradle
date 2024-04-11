@@ -38,8 +38,8 @@ tasks.named('test') {
 
 sonar {
 	properties {
-		property "sonar.projectKey", "haricorp_hariharan-organization"
-		property "sonar.organization", "haricorp"
+		property "sonar.projectKey", "reactive-spring-with-sonar"
+		property "sonar.organization", "hariharan-s-Organization"
 		property "sonar.host.url", "https://sonarcloud.io"
 	}
 }

@@ -29,4 +29,8 @@ public class ProductService {
     public  void anotherUnusedMethod(){
         System.out.println("this is an unused method");
     }
+
+    public int methodForTest(int i, int j){
+        return i+j;
+    }
 }

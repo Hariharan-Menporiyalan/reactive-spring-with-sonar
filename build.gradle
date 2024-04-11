@@ -37,6 +37,12 @@ tasks.named('test') {
 }
 
 sonar {
+	scanner {
+		sonarQubeUrl = "https://sonarcloud.io"
+		organization = "haricorp"
+		projectKey = "reactive-spring-with-sonar"
+		token = project.properties['SONAR_TOKEN'] // Assuming you have a sonarcloud.token property set
+	}
 
 	properties {
 		property "sonar.projectKey", "reactive-spring-with-sonar"

@@ -46,3 +46,9 @@ sonar {
 		property "sonar.tests", "src/test"
 	}
 }
+
+jacocoTestReport {
+	reports {
+		xml.required = true
+	}
+}
